@@ -13,7 +13,7 @@ def predict(path:str):
     keyword1,keyword2= kss.prediction(path)
     return {"prediction":keyword1}
 
-@app.route('/value',methods=['POST'])
+@app.post('/value')
 def value(path:str):
     kss = Keyword_Spotting_Service()
     keyword1,keyword2 = kss.prediction(path)
